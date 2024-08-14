@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator</title>
+    
+</head>
+<body>
+    <h1 id="title">Welcome to Calculator</h1>
+    <div id="adder">
+        <input type="text" name="element1" id="element1" placeholder="Enter a first element"><br>
+        <input type="text" name="element2" id="element2" placeholder="Enter a second element"><br>
+        <input type="text" name="month" id="month" placeholder="Enter a month"><br>
+        <button type="submit" onclick="adder()">ADD</button><br>
+        <button type="submit" onclick="subber()">SUB</button><br>
+        <button type="submit" onclick="multi()">MULTIPLY</button><br>
+        <button type="submit" onclick="divide()">Divide</button><br>
+        <button type="submit" onclick="rdrate()">Calculate RD
+        </button>
+        <div id="result">
+
+        </div><br>
+        <div id="result1"></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+
+    function adder(){
+        let a=Number(document.getElementById('element1').value)
+        let b=Number(document.getElementById('element2').value)
+        let c=a+b
+        let res=document.getElementById('result')
+        res.innerHTML=c
+
+    }
+
+    function subber(){
+        let a=Number(document.getElementById('element1').value)
+        let b=Number(document.getElementById('element2').value)
+        let c=a-b
+        let res=document.getElementById('result')
+        res.innerHTML=c
+
+    }
+
+    function multi(){
+        let a=Number(document.getElementById('element1').value)
+        let b=Number(document.getElementById('element2').value)
+        let c=a*b
+        let res=document.getElementById('result')
+        res.innerHTML=c
+
+    }
+    function divide(){
+        let a=Number(document.getElementById('element1').value)
+        let b=Number(document.getElementById('element2').value)
+        let c=a/b
+        let res=document.getElementById('result')
+        res.innerHTML=c
+
+    }
+
+    function rdrate(){
+        let m=Number(document.getElementById('month').value)
+        if(m<3){
+            rate=3.15;
+        }
+        else if(m>=3 && m<=6){
+            rate=6.17;
+
+        }
+        else {
+            rate=9.9;
+        }
+
+        let res=document.getElementById('result1')
+        res.innerHTML="Your RD rate is "+ rate;
+    }
+
+    </script>
+</body>
+
+<style>
+    body{
+    background-color: rgb(217, 237, 237);
+    text-align: center;
+
+}
+
+#adder{
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    background-color: blueviolet;
+    width: 400px;
+    height: 550px;
+
+
+}
+
+input{
+    align-items: center;
+    margin: 10px 10px 10px;
+    box-sizing: border-box;
+}
+
+button{
+    color: blueviolet;
+    background-color: brown;
+    margin: 10px;
+    font-size: 30px;
+    
+}
+
+#result{
+    align-content: center;
+    align-items: center;
+    
+    margin: auto;
+    background-color: bisque;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+#result1{
+    height:50px;
+    background-color: beige;
+    width:300px;
+    margin:auto;
+    text-align: center;
+    font-size: 20px;
+    
+
+}
+
+
+</style>
+</html>
